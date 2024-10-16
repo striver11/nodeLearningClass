@@ -42,5 +42,89 @@ var f2=function()
 }
 f2();
 
+
+//arrowFuction();         // TypeError: arrowFuction is not a function
+var arrowFuction=()=>{
+    console.log("this is the arrowFunction execution")
+}
+
+arrowFuction();
+
+
+// try to understand the how the output comes
+var arrowFuction2=()=>console.log("welcome");
+                        console.log("hello")
+
+arrowFuction2();
+
+var square= num =>num*num;
+console.log('square of the number'+square(5));
+
+
+//IIFE (Immediately Invoked Function Expression) this is like a constructor
+(function(){
+console.log('IIFE called')
+})();
+
+
+// arrays in js are heterogeneous
+var array1=['apple','mango',232,83.4];
+
+//iterating over the array 
+
+//for..loop
+
+//block scope of let and var differece here also you can see.
+for(var i=0;i<array1.length;i++)
+{
+    console.log(array1[i])
+}
+console.log('i value in for loop if it is "var" :'+i)
+
+for(let j=0;j<array1.length;j++)
+    {
+        console.log(array1[j])
+    }
+//  console.log('j value in for loop if it is "let" :'+j)  //ReferenceError: j is not defined
+
+
+//for..of
+for(let i of array1)
+{
+    console.log(i);
+}
+
+//for..in
+for(let i in array1)
+{
+    console.log(i," "+array1[i]);
+}
+
+
+//forEach()
+array1.forEach(function(x){
+    console.log(x)
+});
+
+array1.forEach(x=>console.log(x));
+
+
+//template literal
+var city='pune';
+var country='india';
+var address=`${city},${country}`;
+console.log(address);
+
+var htmlCode=`y>
+    <h1>This is hello html page
+    </h1>
+    <p>Hello this para</p>
+    <p>Hello this para</p>
+    <p>Hello this para</p>
+    <p>Hello this para</p>
+    <p>Hello this para</p>`;
+console.log(htmlCode);
+
+
 module.exports.xx1=x1;
 module.exports.yy1=y1;

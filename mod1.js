@@ -8,3 +8,8 @@ var calculateArea=function(){
 };
 
 
+// module.exports.PI=PI;
+
+//module.exports.getArea=calculateArea;
+
+module.exports={PI,calculateArea}

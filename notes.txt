@@ -1,0 +1,74 @@
+
+
+1) Local Installation
+
+        npm install <packageName>@versionNumber  --> if we are trying to install the specific versionNumber
+
+        npm instll bootstrap@4.1.2   --> example
+
+        npm install <packageName>  --> this will install the latest version of the packageName
+
+        npm install bootstrap
+
+2) Global Modules
+
+        npm install -g <packageName>@versionNumber
+
+        npm install -g <packageName>
+
+
+we should not always do the Global installation because it may effect our local dependeny (package.json) file and
+your entire application functionality
+
+package.json  --> to create this we have to use  "npm init"
+where you do "npm init"   --> i will ask questions  such as packag name,author,version etc
+it will ask for package name: the package name should be always smaller case
+
+if you don't want to questions to be asked use "npm init --yes"
+
+
+
+Node App project structure
+1)Main.js   (bootstrap file)
+2)module.js (External JS file)
+3)package.json  (Local dependeny information in maintained here)
+4)node_modules   (installation directory for Local packages)
+5)index.html  (view)
+6)package.lock.json  (interdependecies are found here)
+
+
+
+production dependencies we will use "npm install" this we can see in the "package.json"
+
+
+dev dependencies we will use "npm install --save-dev jquery" this we can see in 
+
+
+
+
+
+to see all packages locally  --> npm ls
+to see all packages installed globally  -->npm list -g --depth=0
+
+
+~3.0.5
+~3.0.6
+The patch updates are 5 and 6
+
+^3.0.6
+^3.19.2
+
+
+it you want to see what packages are outdated in your project use --> "npm outdated"
+
+
+
+after we deleted the node_modules if we want to install the node_modules again we use --> npm install
+
+
+Module
+
+    Types of Modules:
+    1)Local Module : Custom,created by user,installation not required, import required
+    2)core module :inbuilt,provided by the node, installation not required, import required
+    3)External/Third party :installation required,import required

@@ -27,6 +27,8 @@ console.log('Todal listeners :'+event1.listenerCount("addition"))
 
 
 
+
+
 ////////// eventStream
 
 const fsreadstream=fs.createReadStream("file3.txt",'utf-8');
@@ -41,6 +43,8 @@ fsreadstream.on("data",chunk=>{
     data=data+chunk
 })
 
+
 fsreadstream.on("end",()=>{
     console.log(data)
 })
+

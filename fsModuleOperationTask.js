@@ -20,6 +20,21 @@ fs.mkdir("dir4",err=>{
             else
             {
                 console.log("2.File is written")
+                fs.readFile("./dir4/file.txt",'utf-8',(err,data)=>{
+                    if(err)
+                        console.log("Error reading file")
+                    else
+                    {
+                        console.log("3.File contents are :")
+                        console.log(data);
+                        fs.unlink("./dir4/file.txt",err=>{
+                            if(err)
+                                console.log("Error removing file!")
+                            else
+                                console.log("4.File removed");
+                        })
+                    }
+                })
             }
         })
     }
